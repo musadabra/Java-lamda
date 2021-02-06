@@ -22,3 +22,19 @@ HOW JAVA 8+ SOLVE THE PROBLEMS
 Everything is an object
 All code blocks are "associated" with classes and objects
 
+*Assigning a block of code to a variable
+asign a method to a variable
+
+variable = public void perform(){
+	System.out.print("hello world");
+
+variable = () -> {
+	System.out.print("Hello world");
+}
+
+
+variable = () -> System.out.print("Hello world");
+
+
+IF YOU HAVE
+Just one parameter you can get rid of the parantesis
