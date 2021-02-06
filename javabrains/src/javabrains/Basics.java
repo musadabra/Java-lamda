@@ -3,11 +3,15 @@ package javabrains;
 public class Basics {
 	
    MyLambda greetingFunction = () -> System.out.print("hello");
-   doublenumberFunction = (int a) -> a * 2;
+   MyInt doublenumberFunction = (int a) -> a * 2;
    
+   System.out.println(doublenumberFunction);
 }
 
 interface MyLambda{
 	void foo();
+}
+
+interface MyInt{
 	int intNum(int a);
 }
