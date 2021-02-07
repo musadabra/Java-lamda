@@ -38,3 +38,5 @@ variable = () -> System.out.print("Hello world");
 
 IF YOU HAVE
 Just one parameter you can get rid of the parantesis
+
+RUNNABLE USING

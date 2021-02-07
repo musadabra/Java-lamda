@@ -1,27 +1,49 @@
 package Lambda;
 
-public class Person implements MyLambda{
+public class Person{
 
 	int age;
-	String name;
+	private String firstname;
+	private String lastname;
 	
-	Person(){}
+	public Person(){}
 	
-	@Override
-	public String show() {
-		// TODO Auto-generated method stub
-		return name;
+	public Person(String fname, String lname, int age) {
+		firstname = fname;
+		lastname = lname;
+		this.age = age;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 
 	@Override
-	public String getPassword() {
-		// TODO Auto-generated method stub
-		return age+name;
+	public String toString() {
+		return "Person [age=" + age + ", firstname=" + firstname + ", lastname=" + lastname + "]";
 	}
-
-	@Override
-	public String getName() {
-		// TODO Auto-generated method stub
-		return name;
-	} 
+	
+	
+	
+	
 }

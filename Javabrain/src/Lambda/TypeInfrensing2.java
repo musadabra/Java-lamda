@@ -5,7 +5,7 @@ public class TypeInfrensing2 {
 		  TypeInfrance len = s -> s.length();
 		  whatLength(s -> s.length());
 		  
-	   }
+	   } 
 	   
 	   public static void whatLength(TypeInfrance type) {
 		   System.out.println(type.stringLength("my name"));
