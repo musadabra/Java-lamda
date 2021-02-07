@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 
-public class UnitOneExcecise {
+public class UnitOneExeciseSolution {
   public static void main(String[] args) {
 	List<Person> people = Arrays.asList(
 				new Person("musa", "hassan", 23),
@@ -24,34 +24,18 @@ public class UnitOneExcecise {
     System.out.println(sortedPeopleTree(people));
 	
 	//Sort with comparable
-	Collections.sort(people, new Comparator<Person>() {
-
-		@Override
-		public int compare(Person o1, Person o2) {
-			// TODO Auto-generated method stub
-			return o1.getLastname().compareTo(o2.getLastname());
-		}
-		
-		
-	});
+	Collections.sort(people, (o1, o2) -> o1.getLastname().compareTo(o2.getLastname()));
 	
 	//Create a method that prints persons element
 	System.out.println("Sorted");
-	printAll(people);
+	printSomeWithCondition(people, p -> true);
 	
 	//Create a method that print all people that have a last name with m
 	System.out.println("Start with");
 	printSome(people, "m");
 	
 	//Print match with condition
-	printSomeWithCondition(people, new Condition() {
-		
-		@Override
-		public boolean test(Person p) {
-			// TODO Auto-generated method stub
-			return p.getLastname().startsWith("h");
-		}
-	});
+	printSomeWithCondition(people, p -> p.getLastname().startsWith("h"));
    }
   
   public static void printSomeWithCondition(List<Person> person, Condition condition) {
@@ -60,13 +44,7 @@ public class UnitOneExcecise {
 			    System.out.println(p);
 	  }
   }
-  
-  public static void printAll(List<Person> p) {
-	  Iterator<Person> per = p.iterator();
-	  while (per.hasNext()) {
-		System.out.println(per.next());
-	  }
-  }
+ 
   
   public static void printSome(List<Person> p, String firstchar) {
 //	  Iterator<Person> per = p.iterator();
@@ -92,8 +70,4 @@ public class UnitOneExcecise {
 	  return tree;	  
   }
   
-}
-
-interface Condition{
-	boolean test(Person p);
 }

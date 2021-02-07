@@ -1,6 +1,6 @@
 package Lambda;
 
-public class Person{
+public class Person implements Comparable<Person>{
 
 	int age;
 	private String firstname;
@@ -41,6 +41,12 @@ public class Person{
 	@Override
 	public String toString() {
 		return "Person [age=" + age + ", firstname=" + firstname + ", lastname=" + lastname + "]";
+	}
+
+	@Override
+	public int compareTo(Person o) {
+		// TODO Auto-generated method stub	
+		return o.getLastname().compareTo(lastname);
 	}
 	
 	
